@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小张同学</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <!--图标-->
+    <link rel="icon" href="/logo.jpeg" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/logo.jpeg" type="image/x-icon"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+</head>
+<body>
+
+<script>
+    window.$docsify = {
+        name: '小张同学的doc',
+
+        repo: 'https://github.com/xiaolu-668',
+        search: 'auto', // 默认值
+        loadSidebar: true,
+        loadNavbar: true,
+        //文件多标题 6 表示此文件由6级标题 自定义标题级数
+        subMaxLevel: 6,
+        // 开启博客封面
+        coverpage: true,
+        <!--只在访问主页时加载封面。-->
+
+        onlyCover: true,
+        // 小屏设备 合并导航栏搭到侧边
+        mergeNavbar: true,
+        // 设置文档搜索
+        search: {
+            maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+            paths: [], // or 'auto'
+            placeholder: 'Type to search',
+
+            // 支持本地化
+            placeholder: {
+                '/zh-cn/': '搜索',
+                '/': 'Type to search'
+            },
+
+            noData: 'No Results!',
+
+            // 支持本地化
+            noData: {
+                '/zh-cn/': '找不到结果',
+                '/': 'No Results'
+            },
+
+            // 搜索标题的最大层级, 1-6
+            depth: 6,
+
+            hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容
+
+            // 避免搜索索引冲突
+            // 同一域下的多个网站之间
+            namespace: 'website-1',
+
+            // 使用不同的索引作为路径前缀（namespaces）
+            // 注意：仅适用于 paths: 'auto' 模式
+            //
+            // 初始化索引时，我们从侧边栏查找第一个路径
+            // 如果它与列表中的前缀匹配，我们将切换到相应的索引
+            pathNamespaces: ['/zh-cn', '/ru-ru', '/ru-ru/v1'],
+
+            // 您可以提供一个正则表达式来匹配前缀。在这种情况下，
+            // 匹配到的字符串将被用来识别索引
+            pathNamespaces: /^(\/(zh-cn|ru-ru))?(\/(v1|v2))?/
+        }
+    }
+</script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+
+}
+</script>
+<!-- Docsify v4 -->
+<script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+<!--导航栏 emoji表情包-->
+<!--<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>-->
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+<!--自定义 Loading 提示-->
+<div id="app">加载中</div>
+<!--添加代码复制按钮-->
+<script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+
+<!--当执行全文搜索时，该插件会忽略双音符（例如，"cafe" 也会匹配 "café"）。像 IE11 这样的旧版浏览器需要使用以下 String.normalize() polyfill 来忽略双音符：-->
+<script src="//polyfill.io/v3/polyfill.min.js?features=String.prototype.normalize"></script>
+
+<!--图片缩放-->
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+<!--博客评论系统-->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '7dadccb844d4a45d6e72',
+        clientSecret: '191967daea51b5359155266b796be219a3f24b79',
+        repo: 'xiaolu-668.github.io',
+        owner: 'xiaolu-668',
+        admin: ['Gxiaolu-668'],
+        id: window.location.pathname,
+        // facebook-like distraction free mode
+        distractionFreeMode: false
+    })
+</script>
+<!--分页导航-->
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
+
+</script>
+</body>
+</html>
